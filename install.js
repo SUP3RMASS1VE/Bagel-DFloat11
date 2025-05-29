@@ -5,7 +5,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/LeanModels/bagel-DFloat11 app",
+          "git clone https://github.com/SUP3RMASS1VE/Bagel-DFloat11-fork app",
         ]
       }
     },
