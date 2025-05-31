@@ -9,6 +9,7 @@ module.exports = {
         "path": "{{args && args.path ? args.path : '.'}}",
         "message": [
           'uv pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128',
+          "uv pip install https://github.com/petermg/flash_attn_windows/releases/download/02/flash_attn-2.7.4.post1+cu128.torch270-cp310-cp310-win_amd64.whl",
           "{{args && args.triton ? 'uv pip install -U --pre triton-windows' : ''}}",
           "{{args && args.sageattention ? 'uv pip install https://github.com/woct0rdho/SageAttention/releases/download/v2.1.1-windows/sageattention-2.1.1+cu128torch2.7.0-cp310-cp310-win_amd64.whl' : ''}}",
         ]
@@ -87,7 +88,8 @@ module.exports = {
         "path": "{{args && args.path ? args.path : '.'}}",
         "message": [
           "uv pip install torch torchvision torchaudio {{args && args.xformers ? 'xformers' : ''}} --index-url https://download.pytorch.org/whl/cu126",
-          "uv pip install flash_attn==2.5.8",
+          "uv pip install ninja",
+          "uv pip install flash_attn",
           "{{args && args.sageattention ? 'uv pip install git+https://github.com/thu-ml/SageAttention.git' : ''}}"
         ]
       },
